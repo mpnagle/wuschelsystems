@@ -1,0 +1,51 @@
+<head>
+  <title>wuschelsystems</title>
+</head>
+
+<body>
+  {{> fakepage}}
+  <!--{{> generalText}}-->
+  {{> czCard}}
+</body>
+
+<template name="fakepage">
+
+<img id="image" src="wuschelremix.png"/>
+
+</template>
+
+
+<template name="generalText">
+<div id="generalText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis dui eget metus venenatis vehicula eget non mi. Vivamus sed magna gravida, fermentum ipsum quis, aliquam lorem. Nunc sem erat, aliquet non volutpat in, molestie nec orci. Etiam quis pretium nisi. Suspendisse tempus feugiat fermentum. Phasellus ac orci at justo tempor aliquet eu ac diam. Fusce lorem lorem, elementum id efficitur non, bibendum eget tellus. Aenean tempus rutrum ligula ac malesuada. Maecenas a consequat enim, sed rhoncus lectus. Nam maximus erat vel lorem rhoncus hendrerit. Curabitur at tempus nisi. Phasellus vitae turpis a eros laoreet finibus.
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum sed mauris nunc. Integer pulvinar, quam ut accumsan lacinia, quam diam luctus elit, eu dictum neque mi a sapien. Quisque viverra tristique metus. Duis ligula augue, dignissim ac mauris eu, viverra laoreet sapien. Curabitur mollis pretium posuere. Integer augue purus, mattis non finibus vel, congue non sem. Quisque lacus massa, lacinia viverra quam ut, pharetra elementum libero. Aliquam erat volutpat. Suspendisse id lectus molestie, viverra lorem ut, bibendum ante. Phasellus eget purus turpis. Duis posuere nibh ut turpis accumsan consectetur. Donec nec felis egestas, lobortis quam sed, blandit sem. Aenean sit amet lacus vehicula, sagittis mi vitae, sagittis lectus. Fusce ultricies risus sed leo finibus, quis semper sem vehicula. Donec nec tellus commodo, faucibus quam tincidunt, malesuada nisl.</div>
+</template>
+
+
+<template name="czCard">
+
+
+<div id="czCard" class="card">
+  
+  
+  {{#with profile}}
+  {{>card}}
+
+</div>
+</template>
+
+<template name="card">
+  <div id="czInfo" class="info">
+    <h2>{{name}}</h2>
+
+    <p>Wuschel (WUS) proteins stimulate central zone (CZ) cell growth.</p>
+  </div>
+  
+  <div id="czActive" class="active">
+    icons icons icons
+
+
+    <span class="graph">graph graph graph</span>
+  </div>
+
+</template>

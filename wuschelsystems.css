@@ -1,0 +1,122 @@
+/* CSS declarations go here */
+
+body{
+  font-family:Helvetica;
+}
+
+#image{
+
+position: absolute;
+top:0;
+left:0;
+z-index:0;
+}
+
+#generalText{
+
+position: absolute;
+z-index:1;
+top:0;
+width:200px;
+}
+
+#czCard{
+
+position: absolute;
+z-index:1;
+top:60px;
+left:510px;
+background-color: #E7F7F7;
+}
+
+
+#wusCard{
+
+position: absolute;
+z-index:1;
+top:360px;
+left:210px;
+background-color: #E7F7F7;
+}
+
+#clvCard{
+
+position: absolute;
+z-index:1;
+top:360px;
+left:810px;
+background-color: #E7F7F7;
+}
+
+#rzCard{
+
+position: absolute;
+z-index:1;
+top:660px;
+left:510px;
+background-color: #E7F7F7;
+}
+
+#play{
+
+  position: absolute;
+  z-index: 1;
+  top: 500px;
+  left: 50px;
+
+}
+
+.card{
+
+
+
+}
+
+.info{
+top:0;
+left:0;
+position: absolute;
+width:150px;
+height:250px;
+background-color: #E7F7F7;
+
+padding: 10px;
+
+border-style: solid;
+border-width: 1px;
+border-color: #D1D1D1;
+
+color: #5BA5CD;
+size: 10pt;
+}
+
+.info h2{
+
+color: #0E6999;
+
+
+}
+
+.active{
+position: absolute;
+top:0;
+left:150px;
+
+width:300px;
+height: 250px;
+background-color:beige;
+
+padding: 10px;
+
+border-style: solid;
+border-color: #D1D1D1;
+border-width: 1px;
+
+}
+
+.graph{
+position:absolute;
+bottom:0;
+right:0;
+
+}
