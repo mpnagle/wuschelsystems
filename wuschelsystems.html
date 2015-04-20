@@ -3,12 +3,19 @@
 </head>
 
 <body>
-  {{> fakepage}}
-  <!--{{> generalText}}-->
+  <!-- {{> fakepage}} -->
+  {{> generalText}}
   {{> czCard}}
   {{> wusCard}}
   {{> rzCard}}
   {{> clvCard}}
+
+  {{> rule1}}
+  {{> rule2}}
+  {{> rule3}}
+  {{> rule4}}
+  {{> rule5}}
+
 
   {{> play}}
 </body>
@@ -21,9 +28,26 @@
 
 
 <template name="generalText">
-<div id="generalText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis dui eget metus venenatis vehicula eget non mi. Vivamus sed magna gravida, fermentum ipsum quis, aliquam lorem. Nunc sem erat, aliquet non volutpat in, molestie nec orci. Etiam quis pretium nisi. Suspendisse tempus feugiat fermentum. Phasellus ac orci at justo tempor aliquet eu ac diam. Fusce lorem lorem, elementum id efficitur non, bibendum eget tellus. Aenean tempus rutrum ligula ac malesuada. Maecenas a consequat enim, sed rhoncus lectus. Nam maximus erat vel lorem rhoncus hendrerit. Curabitur at tempus nisi. Phasellus vitae turpis a eros laoreet finibus.
+  <div id="generalText">
+    The CLAVATA3-WUSCHEL model is an attempt to explain how
+    plant cell differentiation arises
+    from the meristem of a plant.
 
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum sed mauris nunc. Integer pulvinar, quam ut accumsan lacinia, quam diam luctus elit, eu dictum neque mi a sapien. Quisque viverra tristique metus. Duis ligula augue, dignissim ac mauris eu, viverra laoreet sapien. Curabitur mollis pretium posuere. Integer augue purus, mattis non finibus vel, congue non sem. Quisque lacus massa, lacinia viverra quam ut, pharetra elementum libero. Aliquam erat volutpat. Suspendisse id lectus molestie, viverra lorem ut, bibendum ante. Phasellus eget purus turpis. Duis posuere nibh ut turpis accumsan consectetur. Donec nec felis egestas, lobortis quam sed, blandit sem. Aenean sit amet lacus vehicula, sagittis mi vitae, sagittis lectus. Fusce ultricies risus sed leo finibus, quis semper sem vehicula. Donec nec tellus commodo, faucibus quam tincidunt, malesuada nisl.</div>
+    In it, Root Zone cells give rise
+    to the WUS (WUSCHEL) protein,
+    stimulatin the growth of
+    Central Zone cells.
+
+    Central Zone cells in turn give
+    rise to the CLV3 (CLAVATA3 protein),
+    inhibiting the effect of the WUS
+    protein. The regulation of CZ cells
+    is initially activated by the WUS
+    protein. As more CZ cells appear,
+    increasing amounts of CLV are
+    made and inhibit the effects of
+    the WUSCHEL.
+  </div>
 </template>
 
 
@@ -69,17 +93,22 @@ Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
     <p>{{description}}</p>
   </div>
 
-  <div id="czActive" class="active">
+  <div class="active">
     {{{showIcon name=name icon=icon}}}
 
 
-    <span class="graph">graph graph graph</span>
+    <span class="graph">{{> d3}}</span>
   </div>
 
 </template>
 
 <template name="play">
 
-  <button id="play">play</button>ß
+  <button id="play">play</button>
 
+</template>
+
+<template name="d3">
+  <div id="one"></div>
+  <div id="two"></div>
 </template>

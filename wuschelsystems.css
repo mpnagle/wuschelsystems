@@ -18,6 +18,8 @@ position: absolute;
 z-index:1;
 top:0;
 width:200px;
+padding: 15px;
+font-size:12pt;
 }
 
 #czCard{
@@ -25,7 +27,7 @@ width:200px;
 position: absolute;
 z-index:1;
 top:60px;
-left:510px;
+left:560px;
 background-color: #E7F7F7;
 }
 
@@ -35,7 +37,7 @@ background-color: #E7F7F7;
 position: absolute;
 z-index:1;
 top:360px;
-left:210px;
+left:260px;
 background-color: #E7F7F7;
 }
 
@@ -44,7 +46,7 @@ background-color: #E7F7F7;
 position: absolute;
 z-index:1;
 top:360px;
-left:810px;
+left:860px;
 background-color: #E7F7F7;
 }
 
@@ -53,7 +55,7 @@ background-color: #E7F7F7;
 position: absolute;
 z-index:1;
 top:660px;
-left:510px;
+left:560px;
 background-color: #E7F7F7;
 }
 
@@ -66,11 +68,7 @@ background-color: #E7F7F7;
 
 }
 
-.card{
 
-
-
-}
 
 .info{
 top:0;
@@ -88,6 +86,7 @@ border-color: #D1D1D1;
 
 color: #5BA5CD;
 size: 10pt;
+font-size: 12pt;
 }
 
 .info h2{
@@ -120,3 +119,39 @@ bottom:0;
 right:0;
 
 }
+
+
+
+
+/* relevant css below this line */
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #ddd;
+  shape-rendering: crispEdges;
+}
+
+/* don't show x-axis labels */
+rect.scrubbing {
+    fill: rgb(208, 0, 87);
+    display: none;
+}
+.x.axis .tick text {
+    display: none;
+}
+.area.fill {
+    fill: #E0FBFF;
+    stroke: #329DBE;
+}
+svg .overlay {
+    fill: none;
+    pointer-events: all;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* relevant css above this line */
