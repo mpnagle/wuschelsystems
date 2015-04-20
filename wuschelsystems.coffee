@@ -9,22 +9,26 @@ if Meteor.isClient
 
   Template.wusCard.profile =
     'name': 'WUS'
-    'description': 'Wuschel (WUS) proteins stimulate central zone (CZ) cell growth.'
+    'description': 'WUSCHEL (WUS) proteins stimulate central zone (CZ) cell growth.'
     'icon': 'WUS'
 
   Template.clvCard.profile =
-    'name': 'CLV'
-    'description': 'Wuschel (WUS) proteins stimulate central zone (CZ) cell growth.'
+    'name': 'CLV3'
+    'description': "CLAVATA3 (CLV3) proteins inhibit the production of WUSCHEL proteins.
+
+    They are the counter-balance to WUSCHEL's growth-promoting behavior."
     'icon': 'CLV'
 
   Template.czCard.profile =
     'name': 'CZ'
-    'description': 'Wuschel (WUS) proteins stimulate central zone (CZ) cell growth.'
-    'icon': 'CZ'
+    'description': 'Central zone (CZ) cells are stem cells, ready to be differentiated into other kinds of plant cells. '
+    'icon': '<img src="czcell.png"/>'
 
   Template.rzCard.profile =
     'name': 'RZ'
-    'description': 'Wuschel (WUS) proteins stimulate central zone (CZ) cell growth.'
+    'description': 'Root zone (RZ) cells promote the formation of stem cells.
+
+     The number of root zone cells stays constant.'
     'icon': 'RZ'
 
 
