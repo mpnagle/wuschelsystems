@@ -105,18 +105,37 @@ Template.d3.rendered = function()
 
                 }
 
-                function scrubPlots(x) {
-                    plot1.scrub(x)
-                    plot2.scrub(x)
-                }
+                //function scrubPlots(x) {
+                //    plot1.scrub(x)
+                //    plot2.scrub(x)
+                //}
 
-                var plot1 = Plot([60, 0, 0, 50, 50, 50, 50, 0, 40, 40, 40, 40, 0, 48, 48, 48, 48, 0, 54, 54, 54], document.querySelector('#one'), scrubPlots)
-                var plot2 = Plot([5, 5, 5, 5, 10, 8, 8, 8, 8, 10, 8, 8, 8, 8, 11, 9, 9, 9, 9, 12, 10], document.querySelector('#two'), scrubPlots)
+                Tracker.autorun(function(){
 
+                  function scrubPlots(x) {
 
-                $('button').on('click', function() {
-                    plot1.update([0, 10, 10, 10, 0, 0, 10, 5, 5, 0, 0, 10, 6, 6, 0, 0, 10, 6, 6, 0])
-                    plot2.update([0, 10, 10, 10, 0, 0, 10, 5, 5, 0, 0, 10, 6, 6, 0, 0, 10, 6, 6, 0].reverse())
-                })
+                      console.log(x)
+
+                      Session.set("CZcount",Session.get("globalData")["CZ"][x])
+                      Session.set("RZcount",Session.get("globalData")["RZ"][x])
+                      Session.set("CLV3count",Session.get("globalData")["CLV3"][x])
+                      Session.set("WUScount",Session.get("globalData")["WUS"][x])
+
+                      plot1.scrub(x)
+                      plot2.scrub(x)
+                      plot3.scrub(x)
+                      plot4.scrub(x)
+                  }
+                  var plot1 = Plot(Session.get("globalData")["WUS"], document.querySelector('#d3WUS'), scrubPlots)
+                  var plot2 = Plot(Session.get("globalData")["CLV3"], document.querySelector('#d3CLV3'), scrubPlots)
+                  var plot3 = Plot(Session.get("globalData")["RZ"], document.querySelector('#d3RZ'), scrubPlots)
+
+                  var plot4 = Plot(Session.get("globalData")["CZ"], document.querySelector('#d3CZ'), scrubPlots)
+                });
+
+                //$('button').on('click', function() {
+                //    plot1.update([0, 10, 10, 10, 0, 0, 10, 5, 5, 0, 0, 10, 6, 6, 0, 0, 10, 6, 6, 0])
+                //    plot2.update([0, 10, 10, 10, 0, 0, 10, 5, 5, 0, 0, 10, 6, 6, 0, 0, 10, 6, 6, 0].reverse())
+                //})
             //});
 }

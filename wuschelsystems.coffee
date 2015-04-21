@@ -1,35 +1,30 @@
 if Meteor.isClient
 
-  Session.setDefault("CZ",5)
-  Session.setDefault("CLZ",0)
-  Session.setDefault("WUS",0)
-  Session.setDefault("RZ",5)
-
 
 
   Template.wusCard.profile =
     'name': 'WUS'
     'description': 'WUSCHEL (WUS) proteins stimulate central zone (CZ) cell growth.'
-    'icon': 'WUS'
+    'icon': '<img src="wus.png"/>'
 
   Template.clvCard.profile =
     'name': 'CLV3'
     'description': "CLAVATA3 (CLV3) proteins inhibit the production of WUSCHEL proteins.
 
     They are the counter-balance to WUSCHEL's growth-promoting behavior."
-    'icon': 'CLV'
+    'icon': '<img src="clv.png"/>'
 
   Template.czCard.profile =
     'name': 'CZ'
     'description': 'Central zone (CZ) cells are stem cells, ready to be differentiated into other kinds of plant cells. '
-    'icon': '<img src="czcell.png"/>'
+    'icon': '<img class="czcell" src="czcell.png"/>'
 
   Template.rzCard.profile =
     'name': 'RZ'
     'description': 'Root zone (RZ) cells promote the formation of stem cells.
 
      The number of root zone cells stays constant.'
-    'icon': 'RZ'
+    'icon': '<img src="rzcell.png" />'
 
 
   Template.card.showIcon = () ->
@@ -39,10 +34,17 @@ if Meteor.isClient
 
     name = this.name
     icon = this.icon
-    if Session.get(name)
-      limit = Session.get(name)
+
+    console.log name + "count"
+    console.log Session.get(name + "count")
+    if Session.get(name + "count")
+      limit = Session.get(name + "count")
+    else if Session.get(name + "count") is 0
+      limit = 0
     else limit = 20
 
+
+    console.log "limit is " + limit
     i = 0
     toShow = "<p>"
     while i < limit
